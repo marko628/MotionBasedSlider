@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Motion_Based_Slider_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dxd-9B-GVa">
+                                <rect key="frame" x="298" y="285" width="4" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OHw-Zr-lzS"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAo-Ly-7MN">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACK-hA-nRi">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAo-Ly-7MN" firstAttribute="top" secondItem="ACK-hA-nRi" secondAttribute="bottom" constant="25" id="44D-2B-m9H"/>
+                            <constraint firstItem="ACK-hA-nRi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="95" id="EyV-fU-ftv"/>
+                            <constraint firstAttribute="centerY" secondItem="Dxd-9B-GVa" secondAttribute="centerY" id="HXF-kx-s6f"/>
+                            <constraint firstAttribute="centerX" secondItem="Dxd-9B-GVa" secondAttribute="centerX" id="YCP-bM-YFQ"/>
+                            <constraint firstAttribute="centerX" secondItem="cAo-Ly-7MN" secondAttribute="centerX" id="kUs-0h-MYK"/>
+                            <constraint firstAttribute="centerX" secondItem="ACK-hA-nRi" secondAttribute="centerX" id="lLS-Gd-mhL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cAo-Ly-7MN"/>
+                                <exclude reference="ACK-hA-nRi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EyV-fU-ftv"/>
+                                <exclude reference="lLS-Gd-mhL"/>
+                                <exclude reference="44D-2B-m9H"/>
+                                <exclude reference="kUs-0h-MYK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cAo-Ly-7MN"/>
+                                <include reference="ACK-hA-nRi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EyV-fU-ftv"/>
+                                <include reference="lLS-Gd-mhL"/>
+                                <include reference="44D-2B-m9H"/>
+                                <include reference="kUs-0h-MYK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="labelRollValue" destination="ACK-hA-nRi" id="onb-hr-ivR"/>
+                        <outlet property="sliderTiltMe" destination="Dxd-9B-GVa" id="kaJ-uR-E4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="583"/>
+        </scene>
+    </scenes>
+</document>
